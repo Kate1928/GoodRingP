@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "566146363582",
+	"firebase_url": "https://goodringpract-default-rtdb.firebaseio.com/",
+    "project_id": "goodringpract",
+    "storage_bucket": "goodringpract.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566146363582:android:b67945c801ab8dad31aeef",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.GoodRing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566146363582-9id2qkssrlmil1evgj4uj16jiq4mbk1b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.DefaultCompany.GoodRing",
+            "certificate_hash": "6b2da0f93ebf80ba20b20446020fae1ead2c7b0f"
+          }
+        },
+        {
+          "client_id": "566146363582-monl94dicaif9pb3on2o0qp25nbqa21c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb0JpELOXHAjR1nhr3xyWwuf9CCUTvMxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566146363582-monl94dicaif9pb3on2o0qp25nbqa21c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
