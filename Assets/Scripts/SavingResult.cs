@@ -8,7 +8,7 @@ using System;
 //using Firebase.Database;
 public class SavingResult : MonoBehaviour
 {
-    public GameObject LoginCanvas, RegistrationCanvas, StartCanvas, OkImage, HelpCanvas;
+    public GameObject LoginCanvas, RegistrationCanvas, StartCanvas, OkImage, HelpCanvas, Menu, Canvas;
 
     public void OkButton()
     {
@@ -31,7 +31,7 @@ public class SavingResult : MonoBehaviour
         LoginCanvas.SetActive(false);
         StartCanvas.SetActive(false);
         RegistrationCanvas.SetActive(true);
-        TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, true, true);
+        //TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, true, true);
     }
     public void RegBut()
     {
@@ -54,6 +54,21 @@ public class SavingResult : MonoBehaviour
     {
         LoginCanvas.SetActive(true);
         StartCanvas.SetActive(false);
-        TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, true, true);
+        //TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, true, true);
+    }
+    public void StopButtton()
+    {
+        Menu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void UnStoppingButtton1()
+    {
+        Menu.SetActive(false);
+    }
+    public void UnStoppingButtton()
+    {
+        Time.timeScale = 1f;
+        Menu.SetActive(false);
     }
 }

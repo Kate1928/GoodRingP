@@ -25,14 +25,17 @@ public class Result : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        Res = (int)Player.transform.position.z;
-        NowResult.text = "Результат:" + Res;
-        if(Res > Record)
+        if (Player.transform.position.y > 0)
         {
-            NowRecord.text = "Рекорд:" + Res;
-            Record = Res;
-            PlayerPrefs.SetInt("my_Record",Record);
-            PlayerPrefs.Save();
+            Res = (int)Player.transform.position.z;
+            NowResult.text = "Результат:" + Res;
+            if (Res > Record)
+            {
+                NowRecord.text = "Рекорд:" + Res;
+                Record = Res;
+                PlayerPrefs.SetInt("my_Record", Record);
+                PlayerPrefs.Save();
+            }
         }
     }
     

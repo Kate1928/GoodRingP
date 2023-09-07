@@ -7,11 +7,14 @@ using UnityEngine.EventSystems;
 public class PlayerMechanics : MonoBehaviour
 {
     public float direction = 0;
+    public float directionX = 0;
+    public float directionY = 0;
     Rigidbody rb;
     //public Touch touch = Input.GetTouch(0);
     public float Speed = 1;
     public float S = 0.01f;
     public Transform SphereToPlase;
+    public AudioSource GameOver;
     public GameObject Player, RestartButton;
     private Vector3 allPosition = new Vector3(0,1,0);
     private Vector3 startPos;
@@ -54,14 +57,19 @@ public class PlayerMechanics : MonoBehaviour
             //#if !UNITY_EDITOR
             if( Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                direction = 0;
+                //direction = 0;
                 startPos = Input.GetTouch(0).position;
             }
                 
             if(Input.GetTouch(0).phase == TouchPhase.Moved)
-                direction = Input.GetTouch(0).position.x - startPos.x; 
-            //if(Mathf.Abs(direction) < 10)
-                //direction = 0;
+                directionX = Input.GetTouch(0).position.x - startPos.x;
+            if(Input.GetTouch(0).phase == TouchPhase.Moved)
+                directionY = Input.GetTouch(0).position.y - startPos.y;
+            if (Mathf.Abs(directionX) < Mathf.Abs(directionY))
+                direction = 0;
+            else
+                direction = directionX;
+            //direction = 0;
             //#endif
         }
         
@@ -78,6 +86,7 @@ public class PlayerMechanics : MonoBehaviour
     private void PlayerEnd()
     {
         direction = -2;
+        GameOver.Play();
         RestartButton.SetActive(true);
     }
 
